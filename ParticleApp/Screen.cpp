@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "Scene.h"
 #include "Screen.h"
 
@@ -44,10 +45,10 @@ bool Screen::Init() {
   }
 
   this->pixel_data_ = new Uint32[Screen::WINDOW_SIZE_X*Screen::WINDOW_SIZE_Y];
-  memset(this->pixel_data_, 72, Screen::WINDOW_SIZE_X * Screen::WINDOW_SIZE_Y * sizeof(Uint32));
+  memset(this->pixel_data_, 0, Screen::WINDOW_SIZE_X * Screen::WINDOW_SIZE_Y * sizeof(Uint32));
 
   for (int i=0; i < Screen::WINDOW_SIZE_X * Screen::WINDOW_SIZE_Y; i++) {
-    this->pixel_data_[i] = 0xFF78dF0F;
+    // this->pixel_data_[i] = 0xFF78dF0F;
   }
   this->Update();
 
@@ -57,15 +58,17 @@ bool Screen::Init() {
 void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
   Uint32 color = 0;
 
-  color += red;
+  color += 0xFF;
+  color <<= 8;
+  color += blue;
   color <<= 8;
   color += green;
   color <<= 8;
-  color += blue;
-  color += 0xFF;
+  color += red;
 
   this->pixel_data_[x + y * Screen::WINDOW_SIZE_Y] = color;
 }
+
 void Screen::SetPixelByIndex(int index, Uint32 color) {
   this->pixel_data_[index] = color;
 }
@@ -80,7 +83,8 @@ void Screen::RenderLoop() {
   int context_pixel_index = 1;
   int offset = 0;
   while (!this->quit_) {
-    this->SetPixel(2 + offset + context_pixel_index, context_pixel_index, 0, 20, 120);
+    // this->SetPixel(2 + offset + context_pixel_index, context_pixel_index, 12, 14, 201);
+    this->SetPixel(context_pixel_index, context_pixel_index, 255, 0, 0);
     int prev_pixel =
         offset + (context_pixel_index - 1) + (context_pixel_index - 1) * Screen::WINDOW_SIZE_X;
     int next_pixel = offset + context_pixel_index + context_pixel_index * Screen::WINDOW_SIZE_X;
@@ -89,8 +93,8 @@ void Screen::RenderLoop() {
       offset += 10;
       continue;
     }
-    this->pixel_data_[prev_pixel] = 0x00000000;
-    this->pixel_data_[next_pixel] = 0xFFFFFFFF;
+    // this->pixel_data_[prev_pixel] = 0x00000000;
+    // this->pixel_data_[next_pixel] = 0xFFFFFFFF;
     context_pixel_index++;
 
     this->Update();
