@@ -13,12 +13,13 @@ int main(int argc, char** args) {
   std::cout << "Here is my code"
             << "\n";
 
-  Screen* screen = new Screen();
-  PurpleDiagonalsScene* scene = new PurpleDiagonalsScene();
+  Screen screen;
+  // PurpleDiagonalsScene* scene = new PurpleDiagonalsScene();
 
-  screen->Init();
-  screen->RenderLoop();
-  screen->Close();
+  if (screen.Init()) {
+    screen.RenderLoop();
+    screen.Close();
+  }
 
   std::cout << "SLD quit" << "\n";
   return 0;

@@ -18,28 +18,28 @@ bool Screen::Init() {
     return false;
   }
 
-  SDL_Window* window =
+  this->window_ =
       SDL_CreateWindow("Particle app", SDL_WINDOWPOS_UNDEFINED,
                        SDL_WINDOWPOS_UNDEFINED, Screen::WINDOW_SIZE_X, Screen::WINDOW_SIZE_Y, SDL_WINDOW_SHOWN);
 
-  if (window == NULL) {
+  if (this->window_ == NULL) {
     SDL_Quit();
-    return 2;
+    return false;
   }
 
   std::cout << "SLD is fine" << "\n";
 
-  this->renderer_ = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
+  this->renderer_ = SDL_CreateRenderer(this->window_, -1, SDL_RENDERER_PRESENTVSYNC);
   this->texture_ = SDL_CreateTexture(this->renderer_, SDL_PIXELFORMAT_ABGR8888, SDL_TEXTUREACCESS_STATIC, Screen::WINDOW_SIZE_X, Screen::WINDOW_SIZE_Y); 
 
   if (this->renderer_ == NULL) {
-    SDL_DestroyWindow(window);
+    SDL_DestroyWindow(this->window_);
     std::cout << "Can not create renderer" << "\n";
   }
 
   if (this->texture_ == NULL) {
     SDL_DestroyRenderer(this->renderer_);
-    SDL_DestroyWindow(window);
+    SDL_DestroyWindow(this->window_);
     std::cout << "Can not create renderer" << "\n";
   }
 
@@ -47,10 +47,11 @@ bool Screen::Init() {
   memset(this->pixel_data_, 72, Screen::WINDOW_SIZE_X * Screen::WINDOW_SIZE_Y * sizeof(Uint32));
 
   for (int i=0; i < Screen::WINDOW_SIZE_X * Screen::WINDOW_SIZE_Y; i++) {
-    // this->pixel_data_[i] = 0xFF78dF0F;
-    this->pixel_data_[i] = 0xFF00D0FF;
+    this->pixel_data_[i] = 0xFF78dF0F;
   }
   this->Update();
+
+  return true;
 }
 
 void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
@@ -78,7 +79,7 @@ void Screen::RenderLoop() {
   SDL_Event event;
   int context_pixel_index = 1;
   int offset = 0;
-  while (!Screen::quit_) {
+  while (!this->quit_) {
     this->SetPixel(2 + offset + context_pixel_index, context_pixel_index, 0, 20, 120);
     int prev_pixel =
         offset + (context_pixel_index - 1) + (context_pixel_index - 1) * Screen::WINDOW_SIZE_X;
