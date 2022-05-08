@@ -66,7 +66,7 @@ void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
   color <<= 8;
   color += red;
 
-  this->pixel_data_[x + y * Screen::WINDOW_SIZE_Y] = color;
+  this->pixel_data_[x + y * Screen::WINDOW_SIZE_X] = color;
 }
 
 void Screen::SetPixelByIndex(int index, Uint32 color) {
