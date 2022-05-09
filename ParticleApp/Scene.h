@@ -4,6 +4,8 @@
 namespace particle_app {
 class Scene {
  public:
-  void RenderTick();
+  Scene();
+  virtual void RenderTick(Screen* screen);
+  void RenderOnScreen(Screen* screen);
 };
 }  // namespace particle_app

@@ -6,7 +6,7 @@ namespace particle_app {
 class PurpleDiagonalsScene : public Scene {
  public:
   PurpleDiagonalsScene();
-  void RenderTick(Screen screen);
+  void RenderTick(Screen* screen) override;
 
  protected:
   int context_pixel_index_;

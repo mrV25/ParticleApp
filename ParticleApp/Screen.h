@@ -1,6 +1,6 @@
 #pragma once
 #include <SDL.h>
-#include "Scene.h"
+#include "Test.h"
 
 namespace particle_app {
 class Screen {

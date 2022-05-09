@@ -107,11 +107,11 @@ void Screen::RenderLoop() {
   }
 }
 /*
-void Screen::RenderLoop(Scene* scene) {
+void Screen::RenderLoop(Scene scene) {
   SDL_Event event;
   while (!Screen::quit_) {
 
-    scene->RenderTick();
+    scene.RenderTick();
 
     this->Update();
     while (SDL_PollEvent(&event)) {
