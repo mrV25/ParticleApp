@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimatingColoursScene.cpp" />
     <ClCompile Include="PurpleDiagonalsScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Screen.cpp" />
@@ -154,6 +155,7 @@
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimatingColoursScene.h" />
     <ClInclude Include="PurpleDiagonalsScene.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Screen.h" />

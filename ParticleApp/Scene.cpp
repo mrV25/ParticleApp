@@ -2,7 +2,7 @@
 #include "Scene.h"
 
 namespace particle_app {
-Scene::Scene() {
+Scene::Scene() : tick(0) {
   std::cout << "Scene created." << std::endl;
 }
 void Scene::RenderTick(Screen* screen) {
@@ -14,6 +14,8 @@ void Scene::RenderOnScreen(Screen* screen) {
   while (!quit) {
 
     this->RenderTick(screen);
+    // TODO Need to figur out when to reset tick back to 0.
+    this->tick++;
 
     screen->Update();
     while (SDL_PollEvent(&event)) {

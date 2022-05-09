@@ -4,6 +4,7 @@
 #include "Screen.h"
 #include "Scene.h"
 #include "PurpleDiagonalsScene.h"
+#include "AnimatingColoursScene.h"
 
 using namespace particle_app;
 
@@ -15,10 +16,13 @@ int main(int argc, char** args) {
 
   Screen* screen = new Screen;
   PurpleDiagonalsScene purpleScene;
+  AnimatingColoursScene coloursScene;
+
 
   if (screen->Init()) {
     // screen->RenderLoop();
-    purpleScene.RenderOnScreen(screen);
+    //purpleScene.RenderOnScreen(screen);
+    coloursScene.RenderOnScreen(screen);
     screen->Close();
   }
 
