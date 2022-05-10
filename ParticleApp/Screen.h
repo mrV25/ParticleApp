@@ -10,7 +10,8 @@ class Screen {
   Screen();
   bool Init();
   void SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue);
-  void SetPixelByIndex(int index, Uint32 color);
+  void SetPixel(int x, int y, Uint32 colour);
+  void SetPixelByIndex(int index, Uint32 colour);
   void Update();
   void RenderLoop();
   bool Close();

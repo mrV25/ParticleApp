@@ -56,21 +56,24 @@ bool Screen::Init() {
 }
 
 void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
-  Uint32 color = 0;
+  Uint32 colour = 0;
 
-  color += 0xFF;
-  color <<= 8;
-  color += blue;
-  color <<= 8;
-  color += green;
-  color <<= 8;
-  color += red;
+  colour += 0xFF;
+  colour <<= 8;
+  colour += blue;
+  colour <<= 8;
+  colour += green;
+  colour <<= 8;
+  colour += red;
 
-  this->pixel_data_[x + y * Screen::WINDOW_SIZE_X] = color;
+  this->pixel_data_[x + y * Screen::WINDOW_SIZE_X] = colour;
+}
+void Screen::SetPixel(int x, int y, Uint32 colour) {
+  this->pixel_data_[x + y * Screen::WINDOW_SIZE_X] = colour;
 }
 
-void Screen::SetPixelByIndex(int index, Uint32 color) {
-  this->pixel_data_[index] = color;
+void Screen::SetPixelByIndex(int index, Uint32 colour) {
+  this->pixel_data_[index] = colour;
 }
 void Screen::Update() {
   SDL_UpdateTexture(this->texture_, NULL, this->pixel_data_, Screen::WINDOW_SIZE_X * sizeof(Uint32));

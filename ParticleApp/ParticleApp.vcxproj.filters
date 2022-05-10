@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Scene">
+      <UniqueIdentifier>{bd88e908-e784-473e-a7c5-b7e2e5aae077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Particle">
+      <UniqueIdentifier>{53f31817-b24b-4892-a994-0f7ec824c29a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene">
+      <UniqueIdentifier>{cd7b1f8f-0aa8-427a-81ed-2ca507918309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particle">
+      <UniqueIdentifier>{e768e950-d0d9-46d1-abdd-a308f7d8ceb2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -21,34 +33,52 @@
     <ClCompile Include="Screen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PurpleDiagonalsScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\Scene</Filter>
+    </ClCompile>
     <ClCompile Include="AnimatingColoursScene.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="PurpleDiagonalsScene.cpp">
+      <Filter>Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Source Files\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="Swarm.cpp">
+      <Filter>Source Files\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSwarmScene.cpp">
+      <Filter>Source Files\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PurpleDiagonalsScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AnimatingColoursScene.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="PurpleDiagonalsScene.h">
+      <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Header Files\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="Swarm.h">
+      <Filter>Header Files\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSwarmScene.h">
+      <Filter>Header Files\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
