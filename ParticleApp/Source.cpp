@@ -7,6 +7,8 @@
 #include "PurpleDiagonalsScene.h"
 #include "AnimatingColoursScene.h"
 #include "ParticleSwarmScene.h"
+#include "AnimatedParticlesSwarmScene.h"
+#include "RandShakeMover.h"
 
 using namespace particle_app;
 
@@ -22,15 +24,20 @@ int main(int argc, char** args) {
   AnimatingColoursScene coloursScene;
   ParticleSwarmScene swarmScene(12);
 
+  RandShakeMover* mover = new RandShakeMover;
+  AnimatedParticlesSwarmScene animatedSwarmScene(1, mover);
+
 
   if (screen->Init()) {
     // screen->RenderLoop();
     // purpleScene.RenderOnScreen(screen);
     // coloursScene.RenderOnScreen(screen);
-    swarmScene.RenderOnScreen(screen);
+    // swarmScene.RenderOnScreen(screen);
+    animatedSwarmScene.RenderOnScreen(screen);
     screen->Close();
   }
 
+  delete mover;
   delete screen;
 
   std::cout << "SLD quit" << "\n";

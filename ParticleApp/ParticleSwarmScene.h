@@ -9,7 +9,7 @@ class ParticleSwarmScene : public Scene {
   virtual ~ParticleSwarmScene();
   void RenderTick(Screen* screen) override;
 
- private:
+ protected:
   Swarm* swarm_;
 };
 }

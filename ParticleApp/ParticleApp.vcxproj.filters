@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Particle">
       <UniqueIdentifier>{e768e950-d0d9-46d1-abdd-a308f7d8ceb2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Particle\Mover">
+      <UniqueIdentifier>{3401fec2-61b0-4048-be37-4d9a32f98090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particle\Mover">
+      <UniqueIdentifier>{735507b1-697f-494d-a971-cbf70105d08a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -54,6 +60,15 @@
     <ClCompile Include="ParticleSwarmScene.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="AnimatedParticlesSwarmScene.cpp">
+      <Filter>Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Mover.cpp">
+      <Filter>Source Files\Particle\Mover</Filter>
+    </ClCompile>
+    <ClCompile Include="RandShakeMover.cpp">
+      <Filter>Source Files\Particle\Mover</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
@@ -79,6 +94,15 @@
     </ClInclude>
     <ClInclude Include="ParticleSwarmScene.h">
       <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedParticlesSwarmScene.h">
+      <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Mover.h">
+      <Filter>Header Files\Particle\Mover</Filter>
+    </ClInclude>
+    <ClInclude Include="RandShakeMover.h">
+      <Filter>Header Files\Particle\Mover</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

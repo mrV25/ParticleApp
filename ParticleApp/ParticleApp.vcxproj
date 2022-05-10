@@ -147,10 +147,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimatedParticlesSwarmScene.cpp" />
     <ClCompile Include="AnimatingColoursScene.cpp" />
+    <ClCompile Include="Mover.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleSwarmScene.cpp" />
     <ClCompile Include="PurpleDiagonalsScene.cpp" />
+    <ClCompile Include="RandShakeMover.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -158,10 +161,13 @@
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimatedParticlesSwarmScene.h" />
     <ClInclude Include="AnimatingColoursScene.h" />
+    <ClInclude Include="Mover.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticleSwarmScene.h" />
     <ClInclude Include="PurpleDiagonalsScene.h" />
+    <ClInclude Include="RandShakeMover.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="Swarm.h" />

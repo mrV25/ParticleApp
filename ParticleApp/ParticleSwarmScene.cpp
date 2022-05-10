@@ -7,7 +7,6 @@ namespace particle_app {
 ParticleSwarmScene::ParticleSwarmScene(int partical_count) {
   std::cout << "New Particle Swarm Scene created" << std::endl;
   swarm_ = new Swarm(partical_count);
-  swarm_->PrintInfo();
 }
 
 void ParticleSwarmScene::RenderTick(Screen* screen) {
