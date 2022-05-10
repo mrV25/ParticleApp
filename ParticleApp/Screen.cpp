@@ -81,6 +81,9 @@ void Screen::Update() {
   SDL_RenderCopy(this->renderer_, this->texture_, NULL, NULL);
   SDL_RenderPresent(this->renderer_);
 }
+void Screen::Clear() { 
+  memset(this->pixel_data_, 0, Screen::WINDOW_SIZE_X * Screen::WINDOW_SIZE_Y * sizeof(Uint32));
+ }
 void Screen::RenderLoop() {
   SDL_Event event;
   int context_pixel_index = 1;

@@ -13,6 +13,7 @@ class Screen {
   void SetPixel(int x, int y, Uint32 colour);
   void SetPixelByIndex(int index, Uint32 colour);
   void Update();
+  void Clear();
   void RenderLoop();
   bool Close();
 

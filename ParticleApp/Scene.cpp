@@ -18,6 +18,7 @@ void Scene::RenderOnScreen(Screen* screen) {
     this->tick++;
 
     screen->Update();
+    screen->Clear();
     while (SDL_PollEvent(&event)) {
       if (event.type == SDL_QUIT) {
         std::cout << "Quit" << std::endl;

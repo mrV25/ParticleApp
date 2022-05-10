@@ -25,7 +25,7 @@ int main(int argc, char** args) {
   ParticleSwarmScene swarmScene(12);
 
   RandShakeMover* mover = new RandShakeMover;
-  AnimatedParticlesSwarmScene animatedSwarmScene(1, mover);
+  AnimatedParticlesSwarmScene animatedSwarmScene(10, mover);
 
 
   if (screen->Init()) {
