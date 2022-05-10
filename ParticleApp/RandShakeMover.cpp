@@ -4,8 +4,8 @@
 
 namespace particle_app {
   void RandShakeMover::move(Particle* particle) {
-    shake(&particle->x_, 30);
-    shake(&particle->y_, 40);
+    shake(&particle->x_, 700);
+    shake(&particle->y_, 800);
   }
 
   void RandShakeMover::shake(double* coord, int strength) {
