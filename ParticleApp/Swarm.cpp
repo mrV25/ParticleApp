@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Swarm.h"
+#include "RandHelper.h"
 
 namespace particle_app {
   Swarm::Swarm(): partical_count_(Swarm::DEFAULT_PARTICAL_COUNT), mover_(NULL) {
@@ -25,6 +26,23 @@ namespace particle_app {
     std::cout << "Swarm info: " << std::endl;
     for (int i = 0; i < partical_count_; i++) {
       particles_[i].printInfo();
+    }
+  }
+  void Swarm::ResetToCenter() {
+    for (int i = 0; i < partical_count_; i++) {
+      particles_[i].x_ = 0.5;
+      particles_[i].y_ = 0.5;
+    }
+  }
+  void Swarm::KickAll(double force) {
+    for (int i = 0; i < partical_count_; i++) {
+      double direction_angle = RandHelper::randToLimit(180);
+      double speed = RandHelper::randOfOrder(0);
+      double x_speed_part = cos(direction_angle * M_PI / 180.0);
+      double y_speed_part = sin(direction_angle * M_PI / 180.0);
+      int direction = RandHelper::randSign();
+      particles_[i].x_speed_ = force * RandHelper::randSign() * speed * x_speed_part;
+      particles_[i].y_speed_ = force * RandHelper::randSign() * speed * y_speed_part;
     }
   }
 void Swarm::tick() {

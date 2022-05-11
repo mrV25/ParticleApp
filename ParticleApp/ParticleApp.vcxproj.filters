@@ -69,6 +69,15 @@
     <ClCompile Include="RandShakeMover.cpp">
       <Filter>Source Files\Particle\Mover</Filter>
     </ClCompile>
+    <ClCompile Include="ExplosionScene.cpp">
+      <Filter>Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantSpeedMover.cpp">
+      <Filter>Source Files\Particle\Mover</Filter>
+    </ClCompile>
+    <ClCompile Include="RandHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
@@ -103,6 +112,15 @@
     </ClInclude>
     <ClInclude Include="RandShakeMover.h">
       <Filter>Header Files\Particle\Mover</Filter>
+    </ClInclude>
+    <ClInclude Include="ExplosionScene.h">
+      <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantSpeedMover.h">
+      <Filter>Header Files\Particle\Mover</Filter>
+    </ClInclude>
+    <ClInclude Include="RandHelper.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

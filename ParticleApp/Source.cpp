@@ -9,6 +9,8 @@
 #include "ParticleSwarmScene.h"
 #include "AnimatedParticlesSwarmScene.h"
 #include "RandShakeMover.h"
+#include "ExplosionScene.h"
+#include "ConstantSpeedMover.h"
 
 using namespace particle_app;
 
@@ -27,17 +29,23 @@ int main(int argc, char** args) {
   RandShakeMover* mover = new RandShakeMover;
   AnimatedParticlesSwarmScene animatedSwarmScene(1000, mover);
 
+  ConstantSpeedMover* constantSpeedMover = new ConstantSpeedMover;
+  ExplosionScene explosionScene(1000, constantSpeedMover);
+  explosionScene.ResetSwarmToCenter();
+  explosionScene.GiveSwarmKick(0.001);
 
   if (screen->Init()) {
     // screen->RenderLoop();
     // purpleScene.RenderOnScreen(screen);
     // coloursScene.RenderOnScreen(screen);
     // swarmScene.RenderOnScreen(screen);
-    animatedSwarmScene.RenderOnScreen(screen);
+    // animatedSwarmScene.RenderOnScreen(screen);
+    explosionScene.RenderOnScreen(screen);
     screen->Close();
   }
 
   delete mover;
+  delete constantSpeedMover;
   delete screen;
 
   std::cout << "SLD quit" << "\n";

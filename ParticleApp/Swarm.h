@@ -12,6 +12,8 @@ class Swarm {
   int partical_count_;
   int const static DEFAULT_PARTICAL_COUNT = 10;
   void PrintInfo();
+  void ResetToCenter();
+  void KickAll(double force);
   Particle* const particles() const { return particles_; }
   void set_mover(Mover* mover) { mover_ = mover; }
   void tick();
