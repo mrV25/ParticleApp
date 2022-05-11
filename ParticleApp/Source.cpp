@@ -32,7 +32,7 @@ int main(int argc, char** args) {
   ConstantSpeedMover* constantSpeedMover = new ConstantSpeedMover;
   ExplosionScene explosionScene(1000, constantSpeedMover);
   explosionScene.ResetSwarmToCenter();
-  explosionScene.GiveSwarmKick(0.001);
+  explosionScene.GiveSwarmKick(0.011);
 
   if (screen->Init()) {
     // screen->RenderLoop();
