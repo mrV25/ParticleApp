@@ -13,10 +13,7 @@ namespace particle_app {
       if (particles[i].y_ > 1) particles[i].y_ = 0;
 
       int calculated_x = (int)(Screen::WINDOW_SIZE_X * particles[i].x_)%Screen::WINDOW_SIZE_X;
-      int calculated_y = (int)(Screen::WINDOW_SIZE_Y * particles[i].y_)%Screen::WINDOW_SIZE_Y;
-
-
-
+      int calculated_y = (int)((Screen::WINDOW_SIZE_X * particles[i].y_) - ((Screen::WINDOW_SIZE_X - Screen::WINDOW_SIZE_Y - 1) /2))%Screen::WINDOW_SIZE_Y;
 
       screen->SetPixel(calculated_x, calculated_y, particles[i].colour_);
       mover_->move(&particles[i]);
