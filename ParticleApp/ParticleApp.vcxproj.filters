@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Particle\Mover">
       <UniqueIdentifier>{735507b1-697f-494d-a971-cbf70105d08a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Particle\Colourer">
+      <UniqueIdentifier>{f5dc2273-f618-4d0a-b323-506593f6586b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particle\Colourer">
+      <UniqueIdentifier>{06b35f99-a08b-4a05-8fdc-fcab86bc6948}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -78,8 +84,17 @@
     <ClCompile Include="RandHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Colourer.cpp">
+      <Filter>Source Files\Particle\Colourer</Filter>
+    </ClCompile>
+    <ClCompile Include="ColouredExplosionScene.cpp">
+      <Filter>Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SolidColourer.cpp">
+      <Filter>Source Files\Particle\Colourer</Filter>
+    </ClCompile>
     <ClCompile Include="TimeAwareMover.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Particle\Mover</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +142,15 @@
     </ClInclude>
     <ClInclude Include="TimeAwareMover.h">
       <Filter>Header Files\Particle\Mover</Filter>
+    </ClInclude>
+    <ClInclude Include="Colourer.h">
+      <Filter>Header Files\Particle\Colourer</Filter>
+    </ClInclude>
+    <ClInclude Include="SolidColourer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColouredExplosionScene.h">
+      <Filter>Header Files\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

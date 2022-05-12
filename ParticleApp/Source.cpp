@@ -12,6 +12,8 @@
 #include "ExplosionScene.h"
 #include "ConstantSpeedMover.h"
 #include "TimeAwareMover.h"
+#include "SolidColourer.h"
+#include "ColouredExplosionScene.h"
 
 using namespace particle_app;
 
@@ -33,9 +35,16 @@ int main(int argc, char** args) {
   ConstantSpeedMover* constantSpeedMover = new ConstantSpeedMover;
   TimeAwareMover* timeAwareMover = new TimeAwareMover(12);
   // ExplosionScene explosionScene(1000000, constantSpeedMover);
-  ExplosionScene explosionScene(3000000, timeAwareMover);
-  explosionScene.ResetSwarmToCenter();
-  explosionScene.GiveSwarmKick(0.011);
+  // ExplosionScene explosionScene(3000000, timeAwareMover);
+  // explosionScene.ResetSwarmToCenter();
+  // explosionScene.GiveSwarmKick(0.011);
+
+  SolidColourer* colourer = new SolidColourer(0xFFFF0000);
+  ColouredExplosionScene colouredExplosionScene(1000, constantSpeedMover, colourer);
+  colouredExplosionScene.ResetSwarmToCenter();
+  colouredExplosionScene.GiveSwarmKick(0.011);
+  colouredExplosionScene.CheckColourer();
+
 
   if (screen->Init()) {
     // screen->RenderLoop();
@@ -43,13 +52,15 @@ int main(int argc, char** args) {
     // coloursScene.RenderOnScreen(screen);
     // swarmScene.RenderOnScreen(screen);
     // animatedSwarmScene.RenderOnScreen(screen);
-    explosionScene.RenderOnScreen(screen);
+    // explosionScene.RenderOnScreen(screen);
+    colouredExplosionScene.RenderOnScreen(screen);
     screen->Close();
   }
 
   delete mover;
   delete constantSpeedMover;
   delete timeAwareMover;
+  delete colourer;
   delete screen;
 
   std::cout << "SLD quit" << "\n";
