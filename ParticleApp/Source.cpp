@@ -11,6 +11,7 @@
 #include "RandShakeMover.h"
 #include "ExplosionScene.h"
 #include "ConstantSpeedMover.h"
+#include "TimeAwareMover.h"
 
 using namespace particle_app;
 
@@ -30,7 +31,9 @@ int main(int argc, char** args) {
   AnimatedParticlesSwarmScene animatedSwarmScene(1000, mover);
 
   ConstantSpeedMover* constantSpeedMover = new ConstantSpeedMover;
-  ExplosionScene explosionScene(1000, constantSpeedMover);
+  TimeAwareMover* timeAwareMover = new TimeAwareMover(12);
+  // ExplosionScene explosionScene(1000000, constantSpeedMover);
+  ExplosionScene explosionScene(3000000, timeAwareMover);
   explosionScene.ResetSwarmToCenter();
   explosionScene.GiveSwarmKick(0.011);
 
@@ -46,6 +49,7 @@ int main(int argc, char** args) {
 
   delete mover;
   delete constantSpeedMover;
+  delete timeAwareMover;
   delete screen;
 
   std::cout << "SLD quit" << "\n";

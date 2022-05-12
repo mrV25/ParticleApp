@@ -6,7 +6,7 @@ namespace particle_app {
 class AnimatedParticlesSwarmScene : public ParticleSwarmScene {
  public:
   AnimatedParticlesSwarmScene(int particle_count, Mover* mover);
-  void RenderTick(Screen* screen) override;
+  void RenderTick(Screen* screen, int render_tick_diff) override;
 
  protected:
   Mover* mover_;

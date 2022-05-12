@@ -6,9 +6,11 @@ class Scene {
  public:
   Scene();
   virtual void RenderTick(Screen* screen);
+  virtual void RenderTick(Screen* screen, int render_tick_diff);
   void RenderOnScreen(Screen* screen);
 
  protected:
-  int tick;
+  int tick_;
+  int last_render_tick_;
 };
 }  // namespace particle_app

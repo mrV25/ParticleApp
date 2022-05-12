@@ -78,6 +78,9 @@
     <ClCompile Include="RandHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TimeAwareMover.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
@@ -121,6 +124,9 @@
     </ClInclude>
     <ClInclude Include="RandHelper.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeAwareMover.h">
+      <Filter>Header Files\Particle\Mover</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -69,7 +69,7 @@ void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
   this->pixel_data_[x + y * Screen::WINDOW_SIZE_X] = colour;
 }
 void Screen::SetPixel(int x, int y, Uint32 colour) {
-  if (x > Screen::WINDOW_SIZE_X || x < 0 || y > Screen::WINDOW_SIZE_Y || y < 0) {
+  if (x >= Screen::WINDOW_SIZE_X || x < 0 || y >= Screen::WINDOW_SIZE_Y || y < 0) {
     return;
   }
   this->pixel_data_[x + y * Screen::WINDOW_SIZE_X] = colour;
@@ -115,22 +115,6 @@ void Screen::RenderLoop() {
     }
   }
 }
-/*
-void Screen::RenderLoop(Scene scene) {
-  SDL_Event event;
-  while (!Screen::quit_) {
-
-    scene.RenderTick();
-
-    this->Update();
-    while (SDL_PollEvent(&event)) {
-      if (event.type == SDL_QUIT) {
-        this->quit_ = true;
-      }
-    }
-  }
-}
-*/
 bool Screen::Close() {
   delete[] this->pixel_data_;
   SDL_DestroyTexture(this->texture_);

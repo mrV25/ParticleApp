@@ -162,6 +162,7 @@
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Swarm.cpp" />
     <ClCompile Include="Test.cpp" />
+    <ClCompile Include="TimeAwareMover.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimatedParticlesSwarmScene.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="Screen.h" />
     <ClInclude Include="Swarm.h" />
     <ClInclude Include="Test.h" />
+    <ClInclude Include="TimeAwareMover.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
