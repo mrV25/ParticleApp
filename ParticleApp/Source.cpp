@@ -14,6 +14,7 @@
 #include "TimeAwareMover.h"
 #include "SolidColourer.h"
 #include "ColouredExplosionScene.h"
+#include "RandGradientColourer.h"
 
 using namespace particle_app;
 
@@ -40,11 +41,10 @@ int main(int argc, char** args) {
   // explosionScene.GiveSwarmKick(0.011);
 
   SolidColourer* colourer = new SolidColourer(0xFFFF0000);
-  ColouredExplosionScene colouredExplosionScene(1000, constantSpeedMover, colourer);
-  colouredExplosionScene.ResetSwarmToCenter();
-  colouredExplosionScene.GiveSwarmKick(0.011);
+  RandGradientColourer* gradientColourer = new RandGradientColourer(2);
+  ColouredExplosionScene colouredExplosionScene(10000, constantSpeedMover, gradientColourer);
   colouredExplosionScene.CheckColourer();
-
+  colouredExplosionScene.InitScene();
 
   if (screen->Init()) {
     // screen->RenderLoop();
@@ -61,6 +61,7 @@ int main(int argc, char** args) {
   delete constantSpeedMover;
   delete timeAwareMover;
   delete colourer;
+  delete gradientColourer;
   delete screen;
 
   std::cout << "SLD quit" << "\n";

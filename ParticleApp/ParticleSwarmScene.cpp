@@ -18,10 +18,6 @@ void ParticleSwarmScene::RenderTick(Screen* screen) {
 }
 ParticleSwarmScene::~ParticleSwarmScene() { 
   delete swarm_;
-  
   std::cout << "Particle swarm scene destroyed" << std::endl;
-
-
-  
 }
 }

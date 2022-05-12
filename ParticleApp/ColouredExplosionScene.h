@@ -6,7 +6,6 @@ class ColouredExplosionScene : public ExplosionScene {
  public:
   ColouredExplosionScene(int particle_count, Mover* mover, Colourer* colourer);
   void CheckColourer();
- protected:
-  Colourer* colourer_;
+  void InitScene() override;
 };
 }

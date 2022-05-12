@@ -96,6 +96,12 @@
     <ClCompile Include="TimeAwareMover.cpp">
       <Filter>Source Files\Particle\Mover</Filter>
     </ClCompile>
+    <ClCompile Include="RandGradientColourer.cpp">
+      <Filter>Source Files\Particle\Colourer</Filter>
+    </ClCompile>
+    <ClCompile Include="ColourHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
@@ -146,11 +152,17 @@
     <ClInclude Include="Colourer.h">
       <Filter>Header Files\Particle\Colourer</Filter>
     </ClInclude>
-    <ClInclude Include="SolidColourer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ColouredExplosionScene.h">
       <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SolidColourer.h">
+      <Filter>Header Files\Particle\Colourer</Filter>
+    </ClInclude>
+    <ClInclude Include="RandGradientColourer.h">
+      <Filter>Header Files\Particle\Colourer</Filter>
+    </ClInclude>
+    <ClInclude Include="ColourHelper.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

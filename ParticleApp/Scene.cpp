@@ -35,4 +35,5 @@ void Scene::RenderOnScreen(Screen* screen) {
 
   }
 }
+void Scene::InitScene() {}
 }
