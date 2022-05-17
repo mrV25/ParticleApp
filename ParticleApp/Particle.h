@@ -12,6 +12,8 @@ class Particle {
   double y_;
   double x_speed_;
   double y_speed_;
+  double direction_;
+  double speed_;
   Uint32 colour_;
 };
 }

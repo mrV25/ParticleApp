@@ -120,6 +120,9 @@
     <ClCompile Include="BlurBoxPost.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SpiralMover.cpp">
+      <Filter>Source Files\Particle\Mover</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
@@ -193,6 +196,9 @@
     </ClInclude>
     <ClInclude Include="BlurBoxPost.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpiralMover.h">
+      <Filter>Header Files\Particle\Mover</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

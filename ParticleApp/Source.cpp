@@ -17,6 +17,7 @@
 #include "RandGradientColourer.h"
 #include "FadePost.h"
 #include "BlurBoxPost.h"
+#include "SpiralMover.h"
 
 using namespace particle_app;
 
@@ -37,11 +38,12 @@ int main(int argc, char** args) {
   AnimatingColoursScene coloursScene;
   ParticleSwarmScene swarmScene(12);
 
-  RandShakeMover* mover = new RandShakeMover;
+  // ConstantSpeedMover* mover = new ConstantSpeedMover;
+  // TimeAwareMover* mover = new TimeAwareMover(12);
+  SpiralMover* mover = new SpiralMover(0.04);
+  // RandShakeMover* mover = new RandShakeMover;
   AnimatedParticlesSwarmScene animatedSwarmScene(1000, mover);
 
-  ConstantSpeedMover* constantSpeedMover = new ConstantSpeedMover;
-  TimeAwareMover* timeAwareMover = new TimeAwareMover(12);
   // ExplosionScene explosionScene(1000000, constantSpeedMover);
   // ExplosionScene explosionScene(3000000, timeAwareMover);
   // explosionScene.ResetSwarmToCenter();
@@ -49,7 +51,8 @@ int main(int argc, char** args) {
 
   SolidColourer* colourer = new SolidColourer(0xFF00FFFF);
   RandGradientColourer* gradientColourer = new RandGradientColourer(2);
-  ColouredExplosionScene colouredExplosionScene(10000, constantSpeedMover, colourer);
+  // ColouredExplosionScene colouredExplosionScene(10000, constantSpeedMover, colourer);
+  ColouredExplosionScene colouredExplosionScene(1000, mover, gradientColourer);
   colouredExplosionScene.CheckColourer();
   colouredExplosionScene.InitScene();
 
@@ -65,8 +68,6 @@ int main(int argc, char** args) {
   }
 
   delete mover;
-  delete constantSpeedMover;
-  delete timeAwareMover;
   delete colourer;
   delete gradientColourer;
   delete screen;

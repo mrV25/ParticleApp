@@ -36,13 +36,15 @@ namespace particle_app {
   }
   void Swarm::KickAll(double force) {
     for (int i = 0; i < partical_count_; i++) {
-      double direction_angle = RandHelper::randToLimit(180);
-      double speed = RandHelper::randOfOrder(0);
+      double direction_angle = RandHelper::randToLimit(2 * M_PI);
+      double speed = RandHelper::randToLimit(40);
+
       double x_speed_part = cos(direction_angle * M_PI / 180.0);
       double y_speed_part = sin(direction_angle * M_PI / 180.0);
-      int direction = RandHelper::randSign();
-      particles_[i].x_speed_ = force * RandHelper::randSign() * speed * x_speed_part;
-      particles_[i].y_speed_ = force * RandHelper::randSign() * speed * y_speed_part;
+      particles_[i].x_speed_ = force * force * force * RandHelper::randSign() * speed * speed * speed * x_speed_part;
+      particles_[i].y_speed_ = force * force * force * RandHelper::randSign() * speed * speed * speed * y_speed_part;
+      particles_[i].direction_ = direction_angle;
+      particles_[i].speed_ = force*speed;
     }
   }
 void Swarm::tick() {
