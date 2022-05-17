@@ -2,6 +2,7 @@
 #include <iomanip>
 #include "Scene.h"
 #include "Screen.h"
+#include "PostClear.h"
 
 namespace particle_app {
 
@@ -10,7 +11,19 @@ Screen::Screen()
       renderer_(NULL),
       texture_(NULL),
       pixel_data_(NULL),
-      quit_(false) {
+      quit_(false),
+      post_processor_(new PostClear) {}
+
+Screen::Screen(PostProcessor* post_processor)
+    : window_(NULL),
+      renderer_(NULL),
+      texture_(NULL),
+      pixel_data_(NULL),
+      quit_(false),
+      post_processor_(post_processor) {}
+
+Screen::~Screen() {
+  std::cout << "Screen is deleted" << std::endl;
 }
 
 bool Screen::Init() {
@@ -84,9 +97,9 @@ void Screen::Update() {
   SDL_RenderCopy(this->renderer_, this->texture_, NULL, NULL);
   SDL_RenderPresent(this->renderer_);
 }
-void Screen::Clear() { 
-  memset(this->pixel_data_, 0, Screen::WINDOW_SIZE_X * Screen::WINDOW_SIZE_Y * sizeof(Uint32));
- }
+void Screen::PostProcess() {
+  this->post_processor_->Do(this->pixel_data_, Screen::WINDOW_SIZE_X, Screen::WINDOW_SIZE_Y);
+}
 void Screen::RenderLoop() {
   SDL_Event event;
   int context_pixel_index = 1;
@@ -117,6 +130,7 @@ void Screen::RenderLoop() {
 }
 bool Screen::Close() {
   delete[] this->pixel_data_;
+  delete this->post_processor_;
   SDL_DestroyTexture(this->texture_);
   SDL_DestroyRenderer(this->renderer_);
   SDL_DestroyWindow(this->window_);
@@ -124,5 +138,4 @@ bool Screen::Close() {
 
   return true;
 }
-
 }

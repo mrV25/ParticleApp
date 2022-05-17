@@ -37,6 +37,12 @@
     <Filter Include="Source Files\Particle\Colourer">
       <UniqueIdentifier>{06b35f99-a08b-4a05-8fdc-fcab86bc6948}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\PostProcessor">
+      <UniqueIdentifier>{fd338ba3-8529-464a-af1e-fc28b71053c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PostProcessor">
+      <UniqueIdentifier>{cddac9f6-7b65-4cf0-bbe2-ad17cf974f05}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -102,6 +108,15 @@
     <ClCompile Include="ColourHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PostProcessor.cpp">
+      <Filter>Source Files\PostProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="PostClear.cpp">
+      <Filter>Source Files\PostProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="PostFade.cpp">
+      <Filter>Source Files\PostProcessor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
@@ -163,6 +178,15 @@
     </ClInclude>
     <ClInclude Include="ColourHelper.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PostProcessor.h">
+      <Filter>Header Files\PostProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="PostClear.h">
+      <Filter>Header Files\PostProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="PostFade.h">
+      <Filter>Header Files\PostProcessor</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

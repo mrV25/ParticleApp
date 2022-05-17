@@ -157,6 +157,9 @@
     <ClCompile Include="Mover.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleSwarmScene.cpp" />
+    <ClCompile Include="PostClear.cpp" />
+    <ClCompile Include="PostFade.cpp" />
+    <ClCompile Include="PostProcessor.cpp" />
     <ClCompile Include="PurpleDiagonalsScene.cpp" />
     <ClCompile Include="RandGradientColourer.cpp" />
     <ClCompile Include="RandHelper.cpp" />
@@ -180,6 +183,9 @@
     <ClInclude Include="Mover.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticleSwarmScene.h" />
+    <ClInclude Include="PostClear.h" />
+    <ClInclude Include="PostFade.h" />
+    <ClInclude Include="PostProcessor.h" />
     <ClInclude Include="PurpleDiagonalsScene.h" />
     <ClInclude Include="RandGradientColourer.h" />
     <ClInclude Include="RandHelper.h" />

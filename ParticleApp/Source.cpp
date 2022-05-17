@@ -15,6 +15,7 @@
 #include "SolidColourer.h"
 #include "ColouredExplosionScene.h"
 #include "RandGradientColourer.h"
+#include "PostFade.h"
 
 using namespace particle_app;
 
@@ -25,7 +26,11 @@ int main(int argc, char** args) {
   std::cout << "Here is my code"
             << "\n";
 
-  Screen* screen = new Screen;
+  PostFade* post_processor = new PostFade(3);
+  Screen* screen = new Screen(post_processor);
+
+  // Screen* screen = new Screen;
+
   PurpleDiagonalsScene purpleScene;
   AnimatingColoursScene coloursScene;
   ParticleSwarmScene swarmScene(12);
@@ -63,6 +68,7 @@ int main(int argc, char** args) {
   delete colourer;
   delete gradientColourer;
   delete screen;
+  // delete post_processor;
 
   std::cout << "SLD quit" << "\n";
   return 0;
