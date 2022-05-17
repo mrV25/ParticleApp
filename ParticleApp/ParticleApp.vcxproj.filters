@@ -111,10 +111,10 @@
     <ClCompile Include="PostProcessor.cpp">
       <Filter>Source Files\PostProcessor</Filter>
     </ClCompile>
-    <ClCompile Include="PostClear.cpp">
+    <ClCompile Include="ClearPost.cpp">
       <Filter>Source Files\PostProcessor</Filter>
     </ClCompile>
-    <ClCompile Include="PostFade.cpp">
+    <ClCompile Include="FadePost.cpp">
       <Filter>Source Files\PostProcessor</Filter>
     </ClCompile>
   </ItemGroup>
@@ -182,10 +182,10 @@
     <ClInclude Include="PostProcessor.h">
       <Filter>Header Files\PostProcessor</Filter>
     </ClInclude>
-    <ClInclude Include="PostClear.h">
+    <ClInclude Include="ClearPost.h">
       <Filter>Header Files\PostProcessor</Filter>
     </ClInclude>
-    <ClInclude Include="PostFade.h">
+    <ClInclude Include="FadePost.h">
       <Filter>Header Files\PostProcessor</Filter>
     </ClInclude>
   </ItemGroup>

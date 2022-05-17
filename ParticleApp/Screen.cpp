@@ -2,7 +2,7 @@
 #include <iomanip>
 #include "Scene.h"
 #include "Screen.h"
-#include "PostClear.h"
+#include "ClearPost.h"
 
 namespace particle_app {
 
@@ -12,7 +12,7 @@ Screen::Screen()
       texture_(NULL),
       pixel_data_(NULL),
       quit_(false),
-      post_processor_(new PostClear) {}
+      post_processor_(new ClearPost) {}
 
 Screen::Screen(PostProcessor* post_processor)
     : window_(NULL),

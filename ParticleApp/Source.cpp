@@ -15,7 +15,7 @@
 #include "SolidColourer.h"
 #include "ColouredExplosionScene.h"
 #include "RandGradientColourer.h"
-#include "PostFade.h"
+#include "FadePost.h"
 
 using namespace particle_app;
 
@@ -26,7 +26,7 @@ int main(int argc, char** args) {
   std::cout << "Here is my code"
             << "\n";
 
-  PostFade* post_processor = new PostFade(3);
+  FadePost* post_processor = new FadePost(2);
   Screen* screen = new Screen(post_processor);
 
   // Screen* screen = new Screen;
@@ -47,7 +47,7 @@ int main(int argc, char** args) {
 
   SolidColourer* colourer = new SolidColourer(0xFFFF0000);
   RandGradientColourer* gradientColourer = new RandGradientColourer(2);
-  ColouredExplosionScene colouredExplosionScene(10000, constantSpeedMover, gradientColourer);
+  ColouredExplosionScene colouredExplosionScene(10000, constantSpeedMover, colourer);
   colouredExplosionScene.CheckColourer();
   colouredExplosionScene.InitScene();
 
