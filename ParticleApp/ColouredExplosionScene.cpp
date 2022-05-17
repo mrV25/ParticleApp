@@ -14,7 +14,7 @@ void ColouredExplosionScene::CheckColourer() {
 }
 void ColouredExplosionScene::InitScene() {
   this->ResetSwarmToCenter();
-  this->GiveSwarmKick(0.011);
+  this->GiveSwarmKick(0.0051);
 
   Particle* particles = swarm_->particles();
 

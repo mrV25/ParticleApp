@@ -22,10 +22,10 @@ void BlurBoxPost::Do(Uint32* pixel_data, int screen_size_x, int screen_size_y) {
           if (neighbor_x < 0 || neighbor_y < 0 || neighbor_x >= screen_size_x || neighbor_y >= screen_size_y) {
             continue;
           }
-          RGB* rgb = ColourHelper::Uint32ToRgb(pixel_data[neighbor_x + neighbor_y * screen_size_x]);
-          total_neighbor_red += rgb->red;
-          total_neighbor_green += rgb->green;
-          total_neighbor_blue += rgb->blue;
+          RGB rgb = ColourHelper::Uint32ToRgb(pixel_data[neighbor_x + neighbor_y * screen_size_x]);
+          total_neighbor_red += rgb.red;
+          total_neighbor_green += rgb.green;
+          total_neighbor_blue += rgb.blue;
           total_neighbor_count++;
         }
       }

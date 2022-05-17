@@ -18,6 +18,7 @@
 #include "FadePost.h"
 #include "BlurBoxPost.h"
 #include "SpiralMover.h"
+#include "SolidGradientColourer.h"
 
 using namespace particle_app;
 
@@ -49,10 +50,11 @@ int main(int argc, char** args) {
   // explosionScene.ResetSwarmToCenter();
   // explosionScene.GiveSwarmKick(0.011);
 
-  SolidColourer* colourer = new SolidColourer(0xFF00FFFF);
-  RandGradientColourer* gradientColourer = new RandGradientColourer(2);
+  // SolidColourer* colourer = new SolidColourer(0xFF00FFFF);
+  // RandGradientColourer* colourer = new RandGradientColourer(2);
+  SolidGradientColourer* colourer = new SolidGradientColourer(10);
   // ColouredExplosionScene colouredExplosionScene(10000, constantSpeedMover, colourer);
-  ColouredExplosionScene colouredExplosionScene(1000, mover, gradientColourer);
+  ColouredExplosionScene colouredExplosionScene(10000, mover, colourer);
   colouredExplosionScene.CheckColourer();
   colouredExplosionScene.InitScene();
 
@@ -69,9 +71,7 @@ int main(int argc, char** args) {
 
   delete mover;
   delete colourer;
-  delete gradientColourer;
   delete screen;
-  // delete post_processor;
 
   std::cout << "SLD quit" << "\n";
   return 0;

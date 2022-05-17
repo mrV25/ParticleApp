@@ -168,6 +168,7 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="SolidColourer.cpp" />
+    <ClCompile Include="SolidGradientColourer.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="SpiralMover.cpp" />
     <ClCompile Include="Swarm.cpp" />
@@ -196,6 +197,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="SolidColourer.h" />
+    <ClInclude Include="SolidGradientColourer.h" />
     <ClInclude Include="SpiralMover.h" />
     <ClInclude Include="Swarm.h" />
     <ClInclude Include="Test.h" />

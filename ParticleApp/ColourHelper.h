@@ -12,7 +12,8 @@ struct RGB {
 class ColourHelper {
  public:
   static Uint32 RgbToUint32(int red, int green, int blue);
-  static RGB* Uint32ToRgb(Uint32 colour);
+  static Uint32 RgbToUint32Check(int red, int green, int blue);
+  static RGB Uint32ToRgb(Uint32 colour);
   static Uint32 RandomColour();
   static Uint32 FadeColour(Uint32 colour, int fade_amount);
 };

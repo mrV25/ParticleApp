@@ -20,8 +20,9 @@ namespace particle_app {
 
       screen->SetPixel(calculated_x, calculated_y, particles[i].colour_);
       mover_->move(&particles[i], render_tick_diff);
+
       if (colourer_ != NULL) {
-        colourer_->SetColour(&particles[i]);
+        colourer_->SetColour(&particles[i], tick_);
       }
     }
   }

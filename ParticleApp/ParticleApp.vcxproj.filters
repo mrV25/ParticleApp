@@ -123,6 +123,9 @@
     <ClCompile Include="SpiralMover.cpp">
       <Filter>Source Files\Particle\Mover</Filter>
     </ClCompile>
+    <ClCompile Include="SolidGradientColourer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
@@ -199,6 +202,9 @@
     </ClInclude>
     <ClInclude Include="SpiralMover.h">
       <Filter>Header Files\Particle\Mover</Filter>
+    </ClInclude>
+    <ClInclude Include="SolidGradientColourer.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
