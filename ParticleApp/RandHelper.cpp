@@ -15,5 +15,7 @@ namespace particle_app{
   double RandHelper::randOfOrder(int order) {
     return RandHelper::randToOne() / (pow(10, order));
   }
-  double RandHelper::randToLimit(int limit) { return randToOne() * limit; }
+  double RandHelper::randToLimit(int limit) {
+    return randToOne() * limit;
+  }
 }

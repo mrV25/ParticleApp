@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="AnimatedParticlesSwarmScene.cpp" />
     <ClCompile Include="AnimatingColoursScene.cpp" />
+    <ClCompile Include="BlurBoxPost.cpp" />
     <ClCompile Include="ColouredExplosionScene.cpp" />
     <ClCompile Include="Colourer.cpp" />
     <ClCompile Include="ColourHelper.cpp" />
@@ -175,6 +176,7 @@
   <ItemGroup>
     <ClInclude Include="AnimatedParticlesSwarmScene.h" />
     <ClInclude Include="AnimatingColoursScene.h" />
+    <ClInclude Include="BlurBoxPost.h" />
     <ClInclude Include="ColouredExplosionScene.h" />
     <ClInclude Include="Colourer.h" />
     <ClInclude Include="ColourHelper.h" />

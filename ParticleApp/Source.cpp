@@ -16,6 +16,7 @@
 #include "ColouredExplosionScene.h"
 #include "RandGradientColourer.h"
 #include "FadePost.h"
+#include "BlurBoxPost.h"
 
 using namespace particle_app;
 
@@ -26,7 +27,8 @@ int main(int argc, char** args) {
   std::cout << "Here is my code"
             << "\n";
 
-  FadePost* post_processor = new FadePost(2);
+  // FadePost* post_processor = new FadePost(2);
+  BlurBoxPost* post_processor = new BlurBoxPost(1);
   Screen* screen = new Screen(post_processor);
 
   // Screen* screen = new Screen;
@@ -45,7 +47,7 @@ int main(int argc, char** args) {
   // explosionScene.ResetSwarmToCenter();
   // explosionScene.GiveSwarmKick(0.011);
 
-  SolidColourer* colourer = new SolidColourer(0xFFFF0000);
+  SolidColourer* colourer = new SolidColourer(0xFF00FFFF);
   RandGradientColourer* gradientColourer = new RandGradientColourer(2);
   ColouredExplosionScene colouredExplosionScene(10000, constantSpeedMover, colourer);
   colouredExplosionScene.CheckColourer();

@@ -26,9 +26,9 @@ RGB* ColourHelper::Uint32ToRgb(Uint32 colour) {
 
 Uint32 ColourHelper::RandomColour() {
   return RgbToUint32(
-    RandHelper::randToLimit(255),
-    RandHelper::randToLimit(255),
-    RandHelper::randToLimit(255)
+    (int) RandHelper::randToLimit(255),
+    (int) RandHelper::randToLimit(255),
+    (int) RandHelper::randToLimit(255)
   );
 }
 
